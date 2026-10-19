@@ -1,0 +1,280 @@
+{
+  "lap": {
+    "samples": 4760,
+    "duration_s": 95.18,
+    "speed_min_mps": 18.06,
+    "speed_max_mps": 82.78,
+    "peak_steer_deg": 14.7
+  },
+  "scenarios": {
+    "nominal": {
+      "description": "Filter uses the same parameters as the reference car. Only tyre relaxation is unmodelled.",
+      "ekf": {
+        "rmse_deg": 0.04733358342947912,
+        "mae_deg": 0.03511953750725473,
+        "p95_deg": 0.09081005898311229,
+        "max_deg": 0.41760894036281143,
+        "bias_deg": 0.00014595963932311108
+      },
+      "steady_state": {
+        "rmse_deg": 0.6207719082332425,
+        "mae_deg": 0.3237227997273072,
+        "p95_deg": 1.243169391924955,
+        "max_deg": 3.9451122864720976,
+        "bias_deg": -0.06558134198220823
+      },
+      "integration": {
+        "rmse_deg": 0.6381951407068234,
+        "mae_deg": 0.46772022032543364,
+        "p95_deg": 1.3481434687812603,
+        "max_deg": 2.5210395858687464,
+        "bias_deg": 0.43864041237417645
+      },
+      "nees": {
+        "mean": 2.622196485185651,
+        "within_95_percent": 0.681104033970276
+      }
+    },
+    "rear_stiffness_low": {
+      "description": "Rear cornering stiffness 26 percent below the reference car.",
+      "ekf": {
+        "rmse_deg": 0.3274487973518346,
+        "mae_deg": 0.19678942254767648,
+        "p95_deg": 0.7680665055967602,
+        "max_deg": 1.7803697183019538,
+        "bias_deg": 0.049662033939320914
+      },
+      "steady_state": {
+        "rmse_deg": 0.7208411513105802,
+        "mae_deg": 0.47610217534781657,
+        "p95_deg": 1.6028754649824704,
+        "max_deg": 2.9531182053977263,
+        "bias_deg": -0.001977190945085606
+      },
+      "integration": {
+        "rmse_deg": 0.6381951407068234,
+        "mae_deg": 0.46772022032543364,
+        "p95_deg": 1.3481434687812603,
+        "max_deg": 2.5210395858687464,
+        "bias_deg": 0.43864041237417645
+      },
+      "nees": {
+        "mean": 15.521134560700293,
+        "within_95_percent": 0.3872611464968153
+      }
+    },
+    "cg_forward": {
+      "description": "Filter assumes the centre of gravity is 10 cm further forward.",
+      "ekf": {
+        "rmse_deg": 0.08104285163993104,
+        "mae_deg": 0.05420516959223567,
+        "p95_deg": 0.18142728567672653,
+        "max_deg": 0.4865940544534975,
+        "bias_deg": -0.012217790558717202
+      },
+      "steady_state": {
+        "rmse_deg": 0.66670975354535,
+        "mae_deg": 0.33775410090208674,
+        "p95_deg": 1.418380911298537,
+        "max_deg": 4.117853526982212,
+        "bias_deg": -0.07903082392910438
+      },
+      "integration": {
+        "rmse_deg": 0.6381951407068234,
+        "mae_deg": 0.46772022032543364,
+        "p95_deg": 1.3481434687812603,
+        "max_deg": 2.5210395858687464,
+        "bias_deg": 0.43864041237417645
+      },
+      "nees": {
+        "mean": 3.3855086411275535,
+        "within_95_percent": 0.7322717622080679
+      }
+    },
+    "mass_high": {
+      "description": "Filter assumes a 40 kg heavier car, roughly the fuel load at the start of a race.",
+      "ekf": {
+        "rmse_deg": 0.1087215534944373,
+        "mae_deg": 0.05373527674304739,
+        "p95_deg": 0.15291656237288334,
+        "max_deg": 1.3274834690462154,
+        "bias_deg": 0.010245183011854415
+      },
+      "steady_state": {
+        "rmse_deg": 0.6207719082332425,
+        "mae_deg": 0.3237227997273072,
+        "p95_deg": 1.2431693919249551,
+        "max_deg": 3.9451122864720976,
+        "bias_deg": -0.06558134198220825
+      },
+      "integration": {
+        "rmse_deg": 0.6381951407068234,
+        "mae_deg": 0.46772022032543364,
+        "p95_deg": 1.3481434687812603,
+        "max_deg": 2.5210395858687464,
+        "bias_deg": 0.43864041237417645
+      },
+      "nees": {
+        "mean": 2.920544427822739,
+        "within_95_percent": 0.7337579617834394
+      }
+    },
+    "noise_high": {
+      "description": "Sensor noise doubled, with a gyro bias of 0.004 rad/s and an accelerometer bias of 0.15 m/s2.",
+      "ekf": {
+        "rmse_deg": 0.09758475260861246,
+        "mae_deg": 0.07122636261553102,
+        "p95_deg": 0.1820551197444909,
+        "max_deg": 0.7875866793010615,
+        "bias_deg": -0.027770004281234398
+      },
+      "steady_state": {
+        "rmse_deg": 0.6263390987386682,
+        "mae_deg": 0.339721397137218,
+        "p95_deg": 1.2269085347504323,
+        "max_deg": 4.0686913677690155,
+        "bias_deg": -0.08575751001919626
+      },
+      "integration": {
+        "rmse_deg": 3.8639902223919393,
+        "mae_deg": 3.3554192981488136,
+        "p95_deg": 7.121701711836445,
+        "max_deg": 9.913176512822488,
+        "bias_deg": -3.3554192981488136
+      },
+      "nees": {
+        "mean": 9.705248089871676,
+        "within_95_percent": 0.629723991507431
+      }
+    },
+    "limit_handling": {
+      "description": "Steering input scaled by 1.12 to push the car closer to the grip limit.",
+      "ekf": {
+        "rmse_deg": 0.049006344635453725,
+        "mae_deg": 0.03598243269496027,
+        "p95_deg": 0.09277783668567877,
+        "max_deg": 0.4503534027457447,
+        "bias_deg": 0.00019129532431959003
+      },
+      "steady_state": {
+        "rmse_deg": 0.7350219289432287,
+        "mae_deg": 0.36541545909380135,
+        "p95_deg": 1.6861011995613542,
+        "max_deg": 4.574385693943263,
+        "bias_deg": -0.07999483192576157
+      },
+      "integration": {
+        "rmse_deg": 0.6743490670690431,
+        "mae_deg": 0.4903201299074215,
+        "p95_deg": 1.4476899532859282,
+        "max_deg": 2.7616887445154843,
+        "bias_deg": 0.4594880586868289
+      },
+      "nees": {
+        "mean": 2.565876899119773,
+        "within_95_percent": 0.6745222929936305
+      }
+    }
+  },
+  "sensitivity": [
+    {
+      "parameter": "rear_stiffness_scale",
+      "value": 0.7,
+      "rmse_deg": 0.40506738441643303,
+      "mae_deg": 0.23901502332156452,
+      "p95_deg": 0.9646536924759612,
+      "max_deg": 2.2040757322263222,
+      "bias_deg": 0.06142453336768356
+    },
+    {
+      "parameter": "rear_stiffness_scale",
+      "value": 0.85,
+      "rmse_deg": 0.17106184479305914,
+      "mae_deg": 0.10922894625259581,
+      "p95_deg": 0.3987946251083772,
+      "max_deg": 0.9316726100891786,
+      "bias_deg": 0.025412047961945357
+    },
+    {
+      "parameter": "rear_stiffness_scale",
+      "value": 1.0,
+      "rmse_deg": 0.04733358342947912,
+      "mae_deg": 0.03511953750725473,
+      "p95_deg": 0.09081005898311229,
+      "max_deg": 0.41760894036281143,
+      "bias_deg": 0.00014595963932311108
+    },
+    {
+      "parameter": "rear_stiffness_scale",
+      "value": 1.15,
+      "rmse_deg": 0.12937727631042426,
+      "mae_deg": 0.08534897705417618,
+      "p95_deg": 0.2944880023533855,
+      "max_deg": 0.7647744254240887,
+      "bias_deg": -0.01858178410599558
+    },
+    {
+      "parameter": "rear_stiffness_scale",
+      "value": 1.3,
+      "rmse_deg": 0.21830660076813474,
+      "mae_deg": 0.13944819659693627,
+      "p95_deg": 0.49708486313309935,
+      "max_deg": 1.2052043471976457,
+      "bias_deg": -0.033013438507015234
+    },
+    {
+      "parameter": "mass_scale",
+      "value": 0.95,
+      "rmse_deg": 0.09217227405106852,
+      "mae_deg": 0.05292478150426703,
+      "p95_deg": 0.15212679748008204,
+      "max_deg": 0.9319669237814199,
+      "bias_deg": -0.008325459495224069
+    },
+    {
+      "parameter": "mass_scale",
+      "value": 1.0,
+      "rmse_deg": 0.04733358342947912,
+      "mae_deg": 0.03511953750725473,
+      "p95_deg": 0.09081005898311229,
+      "max_deg": 0.41760894036281143,
+      "bias_deg": 0.00014595963932311108
+    },
+    {
+      "parameter": "mass_scale",
+      "value": 1.05,
+      "rmse_deg": 0.10852744887123422,
+      "mae_deg": 0.053674161532683645,
+      "p95_deg": 0.15277160288823913,
+      "max_deg": 1.3252373265803667,
+      "bias_deg": 0.010222303094599929
+    },
+    {
+      "parameter": "noise_scale",
+      "value": 0.5,
+      "rmse_deg": 0.03419129215296635,
+      "mae_deg": 0.022494868601980127,
+      "p95_deg": 0.06430101898617278,
+      "max_deg": 0.3999366203736269,
+      "bias_deg": 0.0002473478374555178
+    },
+    {
+      "parameter": "noise_scale",
+      "value": 1.0,
+      "rmse_deg": 0.04733358342947912,
+      "mae_deg": 0.03511953750725473,
+      "p95_deg": 0.09081005898311229,
+      "max_deg": 0.41760894036281143,
+      "bias_deg": 0.00014595963932311108
+    },
+    {
+      "parameter": "noise_scale",
+      "value": 2.0,
+      "rmse_deg": 0.0812648160169298,
+      "mae_deg": 0.06314536349031472,
+      "p95_deg": 0.16008394816504393,
+      "max_deg": 0.4519046726916841,
+      "bias_deg": 4.156612478636438e-05
+    }
+  ]
+}
