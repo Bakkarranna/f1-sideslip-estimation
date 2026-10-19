@@ -6,9 +6,8 @@ import numpy as np
 import pytest
 
 from sideslip.ekf import ExtendedKalmanFilter
-from sideslip.model import lateral_acceleration
 from sideslip.evaluate import Scenario, load_telemetry, run_scenario
-from sideslip.model import VehicleParams
+from sideslip.model import VehicleParams, lateral_acceleration
 
 DATA = Path(__file__).resolve().parents[1] / "data" / "telemetry_bahrain_2024_lap20.csv"
 
